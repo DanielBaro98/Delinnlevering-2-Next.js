@@ -3,7 +3,6 @@ import MovieCard from "@/components/MovieCard";
 
 export default async function PopularMoviesPage() {
   const data = await getPopularMovies();
-
   return (
     <main>
       <h1> Popular Movies!</h1>
