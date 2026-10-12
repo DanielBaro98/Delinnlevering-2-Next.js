@@ -1,23 +1,21 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { getPopularMovies } from "@/lib/tmdb";
+import MovieCard from "@/components/MovieCard";
 
-export default async function TestPage() {
-  const res = await fetch("https://api.themoviedb.org/3/movie/99999999", {
-    headers: {
-      Authorization: `Bearer ${process.env.TMDB_ACCESS_TOKEN}`,
-    },
-  });
-  console.log("TESTTESTTEST");
-  console.log("res.status:", res.status);
-  console.log("res.ok", res.ok);
-
-  const data = await res.json();
-  console.log("TMDB Response:", JSON.stringify(data, null, 2));
+export default async function PopularMoviesPage() {
+  const data = await getPopularMovies();
 
   return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Check your terminal!</h1>
-      <p>Movie Title: {data.title}</p>
+    <main>
+      <h1> Popular Movies!</h1>
+      <p>Total results found: {data.total_results}</p>
+
+      <ul>
+        {data.results.map((movie) => (
+          <li key={movie.id}>
+            <MovieCard movie={movie} />
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }
