@@ -4,6 +4,7 @@ export type BaseMovie = {
   poster_path: string | null;
   release_date: string;
   vote_average: number;
+  vote_count: number;
 };
 
 export type Movie = BaseMovie & {
