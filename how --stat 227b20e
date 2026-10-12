@@ -1,0 +1,7 @@
+[33m3760156[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #2 from DanielBaro98/feature/movie-card-fallbacks
+[33m227b20e[m[33m ([m[1;31morigin/feature/movie-card-fallbacks[m[33m, [m[1;32mfeature/movie-card-fallbacks[m[33m)[m fallback data handling for moviecard and vote count
+[33m9370779[m Merge pull request #1 from DanielBaro98/feature/movie-rating
+[33m9ecc952[m[33m ([m[1;31morigin/feature/movie-rating[m[33m, [m[1;32mfeature/movie-rating[m[33m)[m added rating from data visible on card
+[33m23c8b30[m coponent moviecard to display data. error message. simple fetch call
+[33m6080814[m enkel fetch og types som samsvarer med data
+[33mc2369a7[m Initial commit from Create Next App
